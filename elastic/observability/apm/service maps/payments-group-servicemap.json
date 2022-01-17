@@ -1,0 +1,146 @@
+{
+  "elements": [
+    {
+      "data": {
+        "id": "checkout-service",
+        "service.environment": "production",
+        "service.name": "checkout-service",
+        "agent.name": "rum-js",
+        "serviceAnomalyStats": {
+          "transactionType": "request",
+          "anomalyScore": 33,
+          "actualValue": 1584195.037007702,
+          "jobId": "checkout-service-request-high_mean_response_time"
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "shipping-service",
+        "service.environment": "production",
+        "service.name": "shipping-service",
+        "agent.name": "go",
+        "serviceAnomalyStats": {
+          "transactionType": "request",
+          "anomalyScore": 70,
+          "actualValue": 1537432.7889848098,
+          "jobId": "shipping-service-request-high_mean_response_time"
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "shop-analytics",
+        "service.environment": "production",
+        "service.name": "shop-analytics",
+        "agent.name": "go",
+        "serviceAnomalyStats": {
+          "transactionType": "request",
+          "anomalyScore": 15,
+          "actualValue": 297469.10153752106,
+          "jobId": "shop-analytics-request-high_mean_response_time"
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "shop-prices",
+        "service.environment": "production",
+        "service.name": "shop-prices",
+        "agent.name": "go",
+        "serviceAnomalyStats": {
+          "transactionType": "request",
+          "anomalyScore": 48,
+          "actualValue": 1816913.9008994652,
+          "jobId": "shop-prices-request-high_mean_response_time"
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "shop-inventory",
+        "service.environment": "production",
+        "service.name": "shop-inventory",
+        "agent.name": "python",
+        "serviceAnomalyStats": {
+          "transactionType": "request",
+          "anomalyScore": 1,
+          "actualValue": 1202245.6171170997,
+          "jobId": "shop-inventory-request-high_mean_response_time"
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "shop-app",
+        "service.environment": "production",
+        "service.name": "shop-app",
+        "agent.name": "nodejs",
+        "serviceAnomalyStats": {
+          "transactionType": "request",
+          "anomalyScore": 63,
+          "actualValue": 897429.4031159213,
+          "jobId": "shop-app-request-high_mean_response_time"
+        }
+      }
+    },
+    {
+      "data": {
+        "span.subtype": "elasticsearch",
+        "span.destination.service.resource": "elasticsearch",
+        "span.type": "db",
+        "id": ">elasticsearch",
+        "label": "elasticsearch"
+      }
+    },
+    {
+      "data": {
+        "id": "checkout-service~shop-app",
+        "source": "checkout-service",
+        "target": "shop-app"
+      }
+    },
+    {
+      "data": {
+        "id": "shop-app~shipping-service",
+        "source": "shop-app",
+        "target": "shipping-service"
+      }
+    },
+    {
+      "data": {
+        "id": "shop-app~shop-analytics",
+        "source": "shop-app",
+        "target": "shop-analytics"
+      }
+    },
+    {
+      "data": {
+        "id": "shop-app~shop-prices",
+        "source": "shop-app",
+        "target": "shop-prices"
+      }
+    },
+    {
+      "data": {
+        "id": "shop-app~shop-inventory",
+        "source": "shop-app",
+        "target": "shop-inventory"
+      }
+    },
+    {
+      "data": {
+        "id": "checkout-service~shop-analytics",
+        "source": "checkout-service",
+        "target": "shop-analytics"
+      }
+    },
+    {
+      "data": {
+        "id": "shop-inventory~>elasticsearch",
+        "source": "shop-inventory",
+        "target": ">elasticsearch"
+      }
+    }
+  ]
+}
